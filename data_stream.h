@@ -13,10 +13,10 @@
 using namespace std;
 using namespace std::chrono;
 
-void prepareOrderVector(int count, int order_type, double price, double quantity_dist_min, double quantity_dist_max,
+void prepareOrderVector(size_t count, int order_type, int cud, double price, double quantity_dist_min, double quantity_dist_max,
                         std::vector<order>& v_orders);
 
-void prepareOrderVector(int count, int order_type, double price_dist_min, double price_dist_max,
+void prepareOrderVector(size_t count, int order_type, int cud, double price_dist_min, double price_dist_max,
                         double quantity_dist_min, double quantity_dist_max,
                         std::vector<order>& v_orders);
 void prepareOrderSet (std::vector<order>& v_orders,
