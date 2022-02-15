@@ -3,7 +3,15 @@ project(matching_engine_test_utils)
 
 set(CMAKE_CXX_STANDARD 23)
 
-include_directories("~/Documents/sc/c++/zeromq/matching.engine")
+set(BOOST_ROOT "/usr/local/include/boost")
+set(BOOSTROOT "/usr/local/include/boost")
+find_package(Boost 1.78.0)
+if(NOT Boost_FOUND)
+    message(FATAL_ERROR "Could not find boost!")
+endif()
+
+
+include_directories("/usr/local/include" "~/Documents/sc/c++/matchingengine")
 
 
 
