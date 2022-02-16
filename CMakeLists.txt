@@ -1,4 +1,14 @@
 cmake_minimum_required(VERSION 3.21)
+
+set(CMAKE_OSX_ARCHITECTURES arm64)
+set(CMAKE_HOST_SYSTEM_PROCESSOR arm64)
+set(CMAKE_SYSTEM_PROCESSOR arm64)
+
+message("CMAKE_OSX_ARCHITECTURES: ${CMAKE_OSX_ARCHITECTURES}")
+message("CMAKE_HOST_SYSTEM_PROCESSOR: ${CMAKE_HOST_SYSTEM_PROCESSOR}")
+message("CMAKE_SYSTEM_PROCESSOR: ${CMAKE_SYSTEM_PROCESSOR}")
+message("CMAKE_CROSSCOMPILING: ${CMAKE_CROSSCOMPILING}")
+
 project(matching_engine_test_utils)
 
 set(CMAKE_CXX_STANDARD 23)
@@ -15,4 +25,4 @@ include_directories("/usr/local/include" "~/Documents/sc/c++/matchingengine")
 
 
 
-add_library(matching_engine_test_utils SHARED data_stream.cpp data_stream.h)
+add_library(matching_engine_test_utils STATIC data_stream.cpp data_stream.h)
